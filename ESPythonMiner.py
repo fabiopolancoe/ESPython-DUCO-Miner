@@ -45,9 +45,6 @@ except ImportError:
         while True:
             pass
 
-soc = socket.socket()
-soc.settimeout(10)
-
 def ducos1(lastBlockHash, expectedHash, difficulty):  # Loop from 1 too 100*diff
     hashcount = 0
     for ducos1res in range(100 * int(difficulty) + 1):
@@ -61,6 +58,9 @@ def ducos1(lastBlockHash, expectedHash, difficulty):  # Loop from 1 too 100*diff
             print("Hash found, sending for feedback...")
             return [ducos1res, hashcount]
 while True:
+    soc = socket.socket()
+    soc.settimeout(10)
+            
     try:
         # This sections grabs pool adress and port from Duino-Coin GitHub file
         serverip = requests.get("https://raw.githubusercontent.com/revoxhere/duino-coin/gh-pages/serverip.txt")  # Serverip file
