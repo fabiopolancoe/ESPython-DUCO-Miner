@@ -109,5 +109,6 @@ while True:
     except Exception as e:
         # Uncomment the next line to get the full exception data
         # raise
+        soc.close()
         print("Error occured:\n\t" + str(e))
 
