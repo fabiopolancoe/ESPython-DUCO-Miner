@@ -63,10 +63,7 @@ while True:
             
     try:
         # This sections grabs pool adress and port from Duino-Coin GitHub file
-        serverip = requests.get("https://raw.githubusercontent.com/revoxhere/duino-coin/gh-pages/serverip.txt")  # Serverip file
-        content = serverip.text.split("\n") # Read content and split into lines
-        pool_address = content[0]  # Line 1 = pool address
-        pool_port = content[1]  # Line 2 = pool port
+        serverip = 5.230.69.132:6002  # New Server IP On SVKO Pool 2
         
         # This section connects and logs user to the server
         soc.connect((str(pool_address), int(pool_port)))  # Connect to the server
