@@ -62,7 +62,6 @@ while True:
     soc.settimeout(10)
             
     try:
-        # This sections grabs pool adress and port from Duino-Coin GitHub file
         serverip = 5.230.69.132:6002  # New Server IP On SVKO Pool 2
         
         # This section connects and logs user to the server
